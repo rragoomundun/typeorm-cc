@@ -7,6 +7,7 @@ Repository for TypeORM crash course from Laith Harb: [TypeORM Crash Course - Typ
 1. Open ormconfig.ts
 2. Create a psql database for the tutorial
 3. Fill fields `username`, `password`, `database` with your information
+4. Run `npm i`
 
 # Bug
 
