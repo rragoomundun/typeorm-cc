@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch './**/*.ts' --exec 'ts-node' src/index.ts",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
-    "create-migration": "npx typeorm migration:generate -n Mock",
-    "run-migration": "npx typeorm migration:run"
+    "create-migration": "ts-node ./node_modules/typeorm/cli.js migration:generate -n Mock -d src/migrations",
+    "do-migration": "ts-node ./node_modules/.bin/typeorm migration:run",
+    "revert-migration": "ts-node ./node_modules/.bin/typeorm migration:revert"
   },
   "keywords": [],
   "author": "",

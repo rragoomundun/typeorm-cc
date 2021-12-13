@@ -1,8 +1,8 @@
+import ormconfig from '../ormconfig';
+
 import express from 'express';
 
 import { createConnection } from 'typeorm'
-
-import { ormconfig } from '../ormconfig';
 
 import { createClientRouter } from './routes/createClient';
 import { createBankerRouter } from './routes/createBanker';

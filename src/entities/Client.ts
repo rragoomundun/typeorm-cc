@@ -3,12 +3,6 @@ import { Person } from './utils/Person';
 import { Banker } from './Banker';
 import { Transaction } from './Transaction';
 
-export enum AccountTypes {
-  BRONZE = 'bronze',
-  SILVER = 'silver',
-  GOLD = 'gold'
-}
-
 @Entity('client')
 export class Client extends Person {
   @Column({ type: 'numeric' })
@@ -50,9 +44,6 @@ export class Client extends Person {
     }
   })
   bankers: Banker[];
-
-  @Column({ type: 'enum', enum: AccountTypes })
-  accountType: string;
 
   @CreateDateColumn()
   updatedAt: Date;
